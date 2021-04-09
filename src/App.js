@@ -14,7 +14,7 @@ function App() {
   const todoNameRef = useRef()
   //ca sa dam load la todos
   useEffect(() =>{
-    //parse o sa caonverteasca in array
+    //parse o sa converteasca in array
     const storedTodso = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
     if(storedTodso) setTodos(storedTodso)
   }, [])
