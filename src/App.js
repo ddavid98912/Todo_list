@@ -1,6 +1,7 @@
 
 import React, {useState, useRef, useEffect} from 'react';
 import TodoList from "./TodoList";
+import style from "./style.css"
 //clasa pentru id-uri diferite
 //import uuid from 'uuid/v4';
 const { v4: uuidv4 } = require('uuid');
@@ -53,6 +54,7 @@ function App() {
 
 
   return (
+    <article class = "grid">
     <>
     <TodoList todos = {todos} toggleTodo ={toggleTodo}/>
     <input ref = {todoNameRef}  type="text"/>
@@ -61,6 +63,7 @@ function App() {
     <div>{todos.filter(todo => !todo.complete).length}  left to do</div>
 
     </>
+    </article>
   )
 }
 
